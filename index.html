@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobPortal - Find Your Dream Job</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Auth Page -->
+    <div id="authPage" class="page active">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <div class="logo-circle">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h1 class="auth-title">JobPortal</h1>
+                    <p class="auth-subtitle" id="authSubtitle">Welcome back!</p>
+                </div>
+
+                <div class="auth-form">
+                    <div id="nameField" class="form-group hidden">
+                        <label>Full Name</label>
+                        <input type="text" id="name" placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="you@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="password" placeholder="••••••••">
+                    </div>
+
+                    <div id="roleField" class="form-group hidden">
+                        <label>I am a</label>
+                        <select id="role">
+                            <option value="student">Student / Job Seeker</option>
+                            <option value="company">Company / Recruiter</option>
+                        </select>
+                    </div>
+
+                    <button id="authBtn" class="btn-primary">Login</button>
+                </div>
+
+                <div class="auth-toggle">
+                    <button id="toggleAuth" class="link-btn">Don't have an account? Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboardPage" class="page">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <div class="nav-brand">
+                        <div class="logo-small">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <span class="brand-text">JobPortal</span>
+                    </div>
+                    <div class="nav-menu">
+                        <button class="nav-link active" data-page="dashboard">Dashboard</button>
+                        <button class="nav-link hidden" id="postJobBtn" data-page="post-job">Post Job</button>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="notification-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-info">
+                        <div class="user-details">
+                            <div class="user-name" id="userName">User</div>
+                            <div class="user-role" id="userRole">student</div>
+                        </div>
+                        <div class="user-avatar" id="userAvatar">U</div>
+                        <button class="logout-btn" id="logoutBtn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16 17 21 12 16 7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-container">
+            <!-- Student Dashboard -->
+            <div id="studentDashboard" class="dashboard-content hidden">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card blue">
+                        <div class="stat-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                            <span class="stat-number" id="availableJobs">0</span>
+                        </div>
+                        <div class="stat-label">Available Jobs</div>
+                    </div>
+                    <div class="stat-card green">
+                        <div class="stat-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                            <span class="stat-number" id="myApplications">0</span>
+                        </div>
+                        <div class="stat-label">Applications</div>
+                    </div>
+                    <div class="stat-card purple">
+                        <div class="stat-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span class="stat-number">12</span>
+                        </div>
+                        <div class="stat-label">Messages</div>
+                    </div>
+                    <div class="stat-card orange">
+                        <div class="stat-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                            <span class="stat-number">85%</span>
+                        </div>
+                        <div class="stat-label">Avg ATS Score</div>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" id="searchJobs" placeholder="Search for jobs, companies, or locations...">
+                    </div>
+                </div>
+
+                <!-- Jobs Grid -->
+                <div id="jobsGrid" class="jobs-grid"></div>
+            </div>
+
+            <!-- Company Dashboard -->
+            <div id="companyDashboard" class="dashboard-content hidden">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card blue">
+                        <div class="stat-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                            <span class="stat-number" id="activeJobs">0</span>
+                        </div>
+                        <div class="stat-label">Active Jobs</div>
+                    </div>
+                    <div class="stat-card green">
+                        <div class="stat-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span class="stat-number" id="totalApplicants">0</span>
+                        </div>
+                        <div class="stat-label">Total Applicants</div>
+                    </div>
+                    <div class="stat-card purple">
+                        <div class="stat-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                            <span class="stat-number" id="avgAtsScore">0%</span>
+                        </div>
+                        <div class="stat-label">Avg ATS Score</div>
+                    </div>
+                    <div class="stat-card orange">
+                        <div class="stat-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                            <span class="stat-number">24</span>
+                        </div>
+                        <div class="stat-label">Interviews</div>
+                    </div>
+                </div>
+
+                <!-- Company Jobs List -->
+                <div id="companyJobsList" class="company-jobs-list"></div>
+            </div>
+
+            <!-- Post Job Form -->
+            <div id="postJobForm" class="dashboard-content hidden">
+                <div class="post-job-container">
+                    <div class="post-job-header">
+                        <div class="header-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <h2>Post a New Job</h2>
+                            <p>Fill in the details below to create a job listing</p>
+                        </div>
+                    </div>
+
+                    <div class="job-form">
+                        <div class="form-group">
+                            <label>Job Title</label>
+                            <input type="text" id="jobTitle" placeholder="e.g., Senior React Developer">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Job Description</label>
+                            <textarea id="jobDescription" rows="4" placeholder="Describe the role, responsibilities, and what you're looking for..."></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Location</label>
+                                <input type="text" id="jobLocation" placeholder="Remote / City">
+                            </div>
+                            <div class="form-group">
+                                <label>Salary Range</label>
+                                <input type="text" id="jobSalary" placeholder="$80k - $120k">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Required Skills (comma-separated)</label>
+                            <input type="text" id="jobSkills" placeholder="React, Node.js, MongoDB, TypeScript">
+                        </div>
+
+                        <button id="submitJobBtn" class="btn-primary full-width">Post Job</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Modal -->
+    <div id="applicationModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalJobTitle">Apply for Position</h3>
+            <p id="modalCompany" class="modal-subtitle">at Company</p>
+
+            <div class="form-group">
+                <label>Your Skills (comma-separated)</label>
+                <input type="text" id="applicantSkills" placeholder="React, Node.js, MongoDB">
+                <p class="form-hint" id="requiredSkills">Required: </p>
+            </div>
+
+            <div class="modal-actions">
+                <button id="submitApplicationBtn" class="btn-primary">Submit Application</button>
+                <button id="cancelApplicationBtn" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/student.js"></script>
+    <script src="js/company.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
