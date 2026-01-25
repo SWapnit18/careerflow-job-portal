@@ -1,5 +1,7 @@
 JobPortal - Complete HTML/CSS/JavaScript Application
 A modern job portal application with separate dashboards for students and companies, featuring ATS (Applicant Tracking System) scoring.
+
+
 📁 Folder Structure
 job-portal/
 │
