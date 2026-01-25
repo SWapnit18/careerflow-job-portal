@@ -2,23 +2,25 @@ JobPortal - Complete HTML/CSS/JavaScript Application
 A modern job portal application with separate dashboards for students and companies, featuring ATS (Applicant Tracking System) scoring.
 
 
-📁 Folder Structure
 job-portal/
 │
-├── index.html          # Main HTML file
+├── index.html          # Main HTML file (entry point)
 │
 ├── css/
-│   └── style.css       # All styles (embedded in index.html)
+│   └── style.css       # All styles for the application
 │
 ├── js/
-│   ├── data.js         # Mock API & Jobs data
-│   ├── auth.js         # Login & Register logic
+│   ├── data.js         # Mock API & job data
+│   ├── auth.js         # Login & register logic
 │   ├── student.js      # Student dashboard logic
 │   ├── company.js      # Company dashboard logic
 │   └── app.js          # Main app controller
 │
-└── assets/
-    └── icons/          # (Optional - using inline SVG)
+├── assets/
+│   └── icons/          # Optional icons (inline SVGs used)
+│
+└── README.md           # Project documentation
+
 🚀 How to Run
 Option 1: Direct Open
 
