@@ -1,19 +1,19 @@
 ````markdown
-# 💼 JobPortal - Complete HTML/CSS/JavaScript Application
+#  JobPortal - Complete HTML/CSS/JavaScript Application
 
 A modern **Job Portal** web application built using **HTML, CSS, and JavaScript** with separate dashboards for **Students** and **Companies**. The application includes an **ATS (Applicant Tracking System) Score Calculator** that helps students understand how well their skills match a job's requirements.
 
 ---
 
-## 📸 Preview
+##  Preview
 
 > Responsive Job Portal with Student Dashboard, Company Dashboard, Job Search, ATS Score, and Applicant Management.
 
 ---
 
-# 🚀 Features
+#  Features
 
-## 👨‍🎓 Student Features
+##  Student Features
 
 - Browse available jobs
 - Search jobs by title, company, or location
@@ -25,7 +25,7 @@ A modern **Job Portal** web application built using **HTML, CSS, and JavaScript*
 
 ---
 
-## 🏢 Company Features
+##  Company Features
 
 - Company registration & login
 - Post new jobs
@@ -36,7 +36,7 @@ A modern **Job Portal** web application built using **HTML, CSS, and JavaScript*
 
 ---
 
-## 🌟 General Features
+##  General Features
 
 - User Authentication
 - Role-Based Login
@@ -48,7 +48,7 @@ A modern **Job Portal** web application built using **HTML, CSS, and JavaScript*
 
 ---
 
-# 🛠️ Tech Stack
+#  Tech Stack
 
 - HTML5
 - CSS3
@@ -59,7 +59,7 @@ A modern **Job Portal** web application built using **HTML, CSS, and JavaScript*
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```text
 job-portal/
@@ -84,7 +84,7 @@ job-portal/
 
 ---
 
-# ⚡ Getting Started
+#  Getting Started
 
 ## Clone Repository
 
@@ -138,7 +138,7 @@ http://localhost:8000
 
 ---
 
-# 📁 File Description
+#  File Description
 
 ## index.html
 
@@ -216,7 +216,7 @@ Contains
 
 ---
 
-# 🧪 Demo Workflow
+#  Demo Workflow
 
 ## Student
 
@@ -239,7 +239,7 @@ Contains
 
 ---
 
-# 🎯 ATS Score
+#  ATS Score
 
 ATS Score is calculated using skill matching.
 
@@ -271,7 +271,7 @@ ATS Score = 75%
 
 ---
 
-# 🎨 Customization
+#  Customization
 
 ## Add Jobs
 
@@ -316,7 +316,7 @@ Modify
 
 ---
 
-# 📱 Responsive Design
+#  Responsive Design
 
 ✅ Desktop
 
@@ -328,7 +328,7 @@ Modify
 
 ---
 
-# 🔒 Security
+#  Security
 
 This project uses **LocalStorage**.
 
@@ -345,7 +345,7 @@ For production use:
 
 ---
 
-# 🚀 Future Improvements
+#  Future Improvements
 
 * Resume Upload
 * AI Resume Analyzer
@@ -362,7 +362,7 @@ For production use:
 
 ---
 
-# 🤝 Contributing
+#  Contributing
 
 Fork the repository
 
@@ -386,7 +386,7 @@ Open a Pull Request.
 
 ---
 
-# 📄 License
+#  License
 
 Licensed under the **MIT License**.
 
@@ -394,7 +394,7 @@ Free for educational and personal use.
 
 ---
 
-# 👨‍💻 Author
+#  Author
 
 **Swapnit Patel**
 
@@ -404,15 +404,15 @@ GitHub: https://github.com/SWapnit18
 
 ---
 
-## ⭐ Support
+##  Support
 
 If you like this project
 
-⭐ Star the Repository
+ Star the Repository
 
 🍴 Fork the Repository
 
-💖 Share with Friends
+ Share with Friends
 
 Happy Coding 🚀
 
