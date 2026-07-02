@@ -1,187 +1,420 @@
-JobPortal - Complete HTML/CSS/JavaScript Application
-A modern job portal application with separate dashboards for students and companies, featuring ATS (Applicant Tracking System) scoring.
+````markdown
+# 💼 JobPortal - Complete HTML/CSS/JavaScript Application
 
+A modern **Job Portal** web application built using **HTML, CSS, and JavaScript** with separate dashboards for **Students** and **Companies**. The application includes an **ATS (Applicant Tracking System) Score Calculator** that helps students understand how well their skills match a job's requirements.
 
+---
+
+## 📸 Preview
+
+> Responsive Job Portal with Student Dashboard, Company Dashboard, Job Search, ATS Score, and Applicant Management.
+
+---
+
+# 🚀 Features
+
+## 👨‍🎓 Student Features
+
+- Browse available jobs
+- Search jobs by title, company, or location
+- View complete job details
+- Apply for jobs
+- Instant ATS Score calculation
+- View application statistics
+- Responsive dashboard
+
+---
+
+## 🏢 Company Features
+
+- Company registration & login
+- Post new jobs
+- Manage job listings
+- View applicants
+- View ATS scores of applicants
+- Dashboard analytics
+
+---
+
+## 🌟 General Features
+
+- User Authentication
+- Role-Based Login
+- Responsive Design
+- Modern UI
+- Smooth Animations
+- Local Storage Database
+- No Backend Required
+
+---
+
+# 🛠️ Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- LocalStorage
+- Flexbox
+- CSS Grid
+
+---
+
+# 📂 Project Structure
+
+```text
 job-portal/
 │
-├── index.html          # Main HTML file (entry point)
+├── index.html
 │
 ├── css/
-│   └── style.css       # All styles for the application
+│   └── style.css
 │
 ├── js/
-│   ├── data.js         # Mock API & job data
-│   ├── auth.js         # Login & register logic
-│   ├── student.js      # Student dashboard logic
-│   ├── company.js      # Company dashboard logic
-│   └── app.js          # Main app controller
+│   ├── data.js
+│   ├── auth.js
+│   ├── student.js
+│   ├── company.js
+│   └── app.js
 │
 ├── assets/
-│   └── icons/          # Optional icons (inline SVGs used)
+│   └── icons/
 │
-└── README.md           # Project documentation
+└── README.md
+````
 
-🚀 How to Run
-Option 1: Direct Open
+---
 
-Extract all files maintaining the folder structure
-Simply open index.html in your browser
-No server required!
+# ⚡ Getting Started
 
-Option 2: With Local Server (Recommended)
-bash# Using Python
-python -m http.server 8000
+## Clone Repository
 
-# Using Node.js
-npx serve
+```bash
+git clone https://github.com/your-username/job-portal.git
+```
 
-# Using PHP
-php -S localhost:8000
-Then open: http://localhost:8000
-📋 Features
-For Students
+```bash
+cd job-portal
+```
 
-✅ Browse available jobs
-✅ Search jobs by title, company, or location
-✅ View job details with required skills
-✅ Apply to jobs with skill matching
-✅ Get instant ATS score based on skill match
-✅ Dashboard with statistics
+---
 
-For Companies
+## Option 1
 
-✅ Post new job listings
-✅ View all posted jobs
-✅ See all applicants per job
-✅ View ATS scores for each applicant
-✅ Dashboard with analytics
+Simply open
 
-General
-
-✅ User registration and login
-✅ Role-based dashboards (Student/Company)
-✅ Modern, responsive UI
-✅ Gradient design with smooth animations
-✅ Local storage for session persistence
-
-🎨 File Descriptions
+```text
 index.html
-Main HTML structure with:
+```
 
-Authentication page
-Student dashboard layout
-Company dashboard layout
-Application modal
-Embedded CSS styles
+in your browser.
 
+---
+
+## Option 2 (Recommended)
+
+### Python
+
+```bash
+python -m http.server 8000
+```
+
+### Node.js
+
+```bash
+npx serve
+```
+
+### PHP
+
+```bash
+php -S localhost:8000
+```
+
+Visit
+
+```
+http://localhost:8000
+```
+
+---
+
+# 📁 File Description
+
+## index.html
+
+* Authentication Page
+* Student Dashboard
+* Company Dashboard
+* Job Application Modal
+
+---
+
+## css/style.css
+
+Contains
+
+* Responsive Layout
+* Cards
+* Buttons
+* Navigation
+* Dashboard
+* Animations
+
+---
+
+## js/data.js
+
+Contains
+
+* Mock Database
+* Sample Jobs
+* User Data
+* API Functions
+
+---
+
+## js/auth.js
+
+Contains
+
+* Login
+* Register
+* Validation
+* Session Management
+
+---
+
+## js/student.js
+
+Contains
+
+* Job Search
+* ATS Score
+* Job Applications
+* Student Statistics
+
+---
+
+## js/company.js
+
+Contains
+
+* Job Posting
+* Applicant List
+* Analytics
+* Dashboard
+
+---
+
+## js/app.js
+
+Contains
+
+* Navigation
+* Dashboard Controller
+* UI Rendering
+
+---
+
+# 🧪 Demo Workflow
+
+## Student
+
+1. Register
+2. Login
+3. Browse Jobs
+4. Apply
+5. Enter Skills
+6. View ATS Score
+
+---
+
+## Company
+
+1. Register
+2. Login
+3. Post Jobs
+4. View Applicants
+5. Check ATS Scores
+
+---
+
+# 🎯 ATS Score
+
+ATS Score is calculated using skill matching.
+
+Example
+
+Required Skills
+
+```
+HTML
+CSS
+JavaScript
+React
+```
+
+Student Skills
+
+```
+HTML
+CSS
+React
+Node.js
+```
+
+Result
+
+```
+ATS Score = 75%
+```
+
+---
+
+# 🎨 Customization
+
+## Add Jobs
+
+Open
+
+```
 js/data.js
+```
 
-Mock database (DB object)
-API functions for all operations
-Sample job listings
-User management
+Example
 
-js/auth.js
-
-Login/Register toggle
-Form validation
-Session management
-Token storage
-
-js/student.js
-
-Job browsing and filtering
-Application submission
-ATS score calculation
-Stats rendering
-
-js/company.js
-
-Job posting form
-Applicant management
-Company dashboard stats
-Job listings
-
-js/app.js
-
-Main application controller
-Navigation management
-Dashboard initialization
-User info updates
-
-🧪 Test Accounts
-Create Your Own
-
-Click "Don't have an account? Register"
-Fill in your details
-Select role (Student or Company)
-Click Register
-Login with your credentials
-
-🎯 How to Use
-As a Student:
-
-Register with role "Student"
-Login to view dashboard
-Search for jobs
-Click "Apply Now" on any job
-Enter your skills (comma-separated)
-Get instant ATS score!
-
-As a Company:
-
-Register with role "Company"
-Login to view dashboard
-Click "Post Job" in navigation
-Fill in job details
-View applicants and their ATS scores
-
-🔧 Customization
-Adding More Jobs
-Edit js/data.js and add to the jobs array:
-javascript{
-    _id: '4',
-    title: 'Your Job Title',
-    company: 'Your Company',
-    skillsRequired: ['Skill1', 'Skill2'],
-    description: 'Job description',
-    location: 'Location',
-    salary: '$XX - $XX',
-    postedDate: '2026-01-24',
-    applicants: []
+```javascript
+{
+    _id:'4',
+    title:'Frontend Developer',
+    company:'ABC Technologies',
+    skillsRequired:['HTML','CSS','JavaScript'],
+    description:'Frontend Developer Position',
+    location:'Lucknow',
+    salary:'₹4 LPA',
+    postedDate:'2026-07-01',
+    applicants:[]
 }
-Changing Colors
-Edit the CSS gradients in index.html:
+```
 
-Primary gradient: #2563eb to #9333ea
-Stat cards: .stat-card.blue/green/purple/orange
+---
 
-Connecting to Real Backend
-Replace API functions in js/data.js with real API calls:
-javascriptasync login(email, password) {
-    const response = await fetch('YOUR_API_URL/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
-    });
-    return await response.json();
-}
-📱 Responsive Design
+## Change Theme
 
-Desktop: Full layout with all features
-Tablet: Adjusted grid layouts
-Mobile: Single column, simplified navigation
+Open
 
-🔒 Security Note
-This is a frontend demo using localStorage. For production:
+```
+css/style.css
+```
 
-Implement proper backend authentication
-Use secure token storage
-Add input sanitization
-Implement HTTPS
-Add CSRF protection
+Modify
 
-📄 License
-Free to use for personal and educational projects.
-🤝 Support
-For issues or questions, refer to the inline code comments.
+```css
+#2563eb
+#9333ea
+```
+
+---
+
+# 📱 Responsive Design
+
+✅ Desktop
+
+✅ Laptop
+
+✅ Tablet
+
+✅ Mobile
+
+---
+
+# 🔒 Security
+
+This project uses **LocalStorage**.
+
+For production use:
+
+* Node.js Backend
+* Express.js
+* MongoDB
+* JWT Authentication
+* Password Hashing
+* HTTPS
+* CSRF Protection
+* XSS Protection
+
+---
+
+# 🚀 Future Improvements
+
+* Resume Upload
+* AI Resume Analyzer
+* Resume Builder
+* Email Notifications
+* Admin Dashboard
+* Company Verification
+* Saved Jobs
+* Google Login
+* Dark Mode
+* Profile Management
+* REST API
+* MongoDB Integration
+
+---
+
+# 🤝 Contributing
+
+Fork the repository
+
+```bash
+git checkout -b feature-name
+```
+
+Commit
+
+```bash
+git commit -m "Added new feature"
+```
+
+Push
+
+```bash
+git push origin feature-name
+```
+
+Open a Pull Request.
+
+---
+
+# 📄 License
+
+Licensed under the **MIT License**.
+
+Free for educational and personal use.
+
+---
+
+# 👨‍💻 Author
+
+**Swapnit Patel**
+
+Aspiring Data Analyst & Full Stack Developer
+
+GitHub: https://github.com/SWapnit18
+
+---
+
+## ⭐ Support
+
+If you like this project
+
+⭐ Star the Repository
+
+🍴 Fork the Repository
+
+💖 Share with Friends
+
+Happy Coding 🚀
+
+```
+```
